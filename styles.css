@@ -46,10 +46,6 @@ p {
   flex-wrap: wrap;
 }
 
-.logo {
-  height: 80px;
-}
-
 .nav {
   display: flex;
   align-items: center;
