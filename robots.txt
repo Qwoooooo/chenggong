@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://chenggonggongcheng.com.tw/sitemap.xml
