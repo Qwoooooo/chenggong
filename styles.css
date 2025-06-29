@@ -94,7 +94,7 @@ p {
 
 /* Hero 區 */
 .hero {
-  background: url('banner.png') center/cover no-repeat;
+  background: url('banner.jpg') center/cover no-repeat;
   position: relative;
   height: 600px;
   display: flex;
