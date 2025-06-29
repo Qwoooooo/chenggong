@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>成功工程行｜打石工與粗工派遣服務</title>
+  <meta name="description" content="成功工程行專營打石與粗工人力派遣，服務新竹及周邊地區，提供專業、彈性與高效率的人力支援。">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header 導覽列 -->
+  <header class="header">
+    <div class="container">
+      <img src="images/logo.png" alt="成功工程行 Logo" class="logo">
+    
+      <nav class="nav">
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul id="nav-links">
+          <li><a href="#home">首頁</a></li>
+          <li><a href="#about">關於我們</a></li>
+          <li><a href="#services">服務項目</a></li>
+          <li><a href="#contact">聯絡我們</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero 區 -->
+  <section id="home" class="hero">
+    <div class="hero-overlay">
+      <h1>人力派遣</h1>
+      <p>高效率、負責任，是您工程的最佳後盾</p>
+      <a href="#services" class="btn">了解我們的服務</a>
+    </div>
+  </section>
+
+  <!-- 關於我們 -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>關於我們</h2>
+      <p>成功工程行提供專業打石工、房屋拆除與清潔等粗工人力派遣，服務新竹及周邊地區，配合彈性、效率高、重視安全，協助工程如期順利完成。</p>
+    </div>
+  </section>
+
+  <!-- 服務項目 -->
+  <section id="services" class="section bg-light">
+    <div class="container">
+      <h2>服務項目</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>打石工</h3>
+          <ul>
+            <li>拆除牆面、地坪與磁磚</li>
+            <li>鑿混凝土與破碎作業</li>
+            <li>熟練氣動與電動工具操作</li>
+            <li>包含清運與現場安全措施</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>粗工</h3>
+          <ul>
+            <li>材料搬運與工地支援</li>
+            <li>場地整理與清潔</li>
+            <li>模板、鋼筋等工程協助</li>
+            <li>彈性派遣、臨時或長期皆可</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 聯絡我們 -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>聯絡我們</h2>
+      <p>歡迎填寫表單或透過電話、LINE 聯繫我們</p>
+      <div class="contact-grid">
+        
+        <form id="contact-form" class="contact-form">
+            <input type="text" name="name" placeholder="姓名" required>
+            <input type="tel" name="phone" placeholder="電話" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="留言內容" rows="5" required></textarea>
+            
+            <input type="text" name="_gotcha" style="display:none;">
+
+            <button type="submit">送出</button>
+            <p id="form-status" class="form-status"></p>
+        </form>
+
+        <div class="contact-info">
+          <p><strong>地址：</strong>新竹縣湖口鄉中山路一段</p>
+          <p><strong>電話：</strong><a href="tel:035692910">03-5692910</a></p>
+          <p><strong>手機：</strong><a href="tel:0955151621、0981438588">0955-151-621、0981-438-588</a></p>
+          <p><strong>LINE：</strong><a href="https://line.me/ti/p/qzJLYWo71j" target="_blank">加入 LINE</a></p>
+          <p><img src="images/qrcode.png" alt="LINE QR Code" class="qrcode"></p>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 成功工程行. 版權所有.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav-links').classList.toggle('active');
+    }
+
+
+    document.getElementById("contact-form").addEventListener("submit", async function (e) {
+        e.preventDefault();
+        const form = e.target;
+        const status = document.getElementById("form-status");
+
+        const data = new FormData(form);
+
+        // 防垃圾機器人 (honeypot)
+        if (data.get("_gotcha")) {
+            status.innerText = "機器人偵測，未送出表單。";
+            status.style.color = "red";
+            return;
+        }
+
+        try {
+            const res = await fetch("https://formspree.io/f/mnnvlkye", {
+                method: "POST",
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+            }
+        });
+
+        if (res.ok) {
+            form.reset();
+            status.innerText = "✅ 感謝您的聯絡，我們會盡快回覆您。";
+            status.style.color = "green";
+        } else {
+            status.innerText = "❌ 送出失敗，請稍後再試。";
+            status.style.color = "red";
+        }
+        } catch (error) {
+            status.innerText = "❌ 發生錯誤，請檢查網路或稍後再試。";
+            status.style.color = "red";
+        }
+    });
+
+  </script>
+</body>
+</html>
