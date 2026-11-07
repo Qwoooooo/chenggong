@@ -259,17 +259,33 @@ h1, h2, h3 {
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: stretch;
+  gap: 30px;
+  align-items: stretch; /* 強制左右卡片同高 */
 }
 
-/* 左側表單樣式 */
+/* 左右雙卡片統一質感外框 (徹底解決對齊與死白問題) */
+.contact-card {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 4px 15px rgba(15, 43, 72, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+/* 左側表單內部佈局 */
 .contact-form {
+  margin: 0;
+}
+
+.form-top {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  justify-content: space-between;
-  height: 100%;
 }
 
 .form-group {
@@ -296,12 +312,10 @@ h1, h2, h3 {
   box-shadow: 0 0 0 3px rgba(15, 43, 72, 0.1);
 }
 
-.form-status {
-  margin-top: 10px;
-  font-weight: bold;
+.form-bottom {
+  margin-top: 20px;
 }
 
-/* 品牌深藍主按鈕 (送出需求) */
 .btn-submit {
   background-color: #0f2b48;
   color: #ffffff;
@@ -321,24 +335,17 @@ h1, h2, h3 {
   transform: translateY(-1px);
 }
 
-/* 右側聯絡資訊卡片 */
-.contact-info {
-  background: #ffffff;
-  padding: 25px;
-  border-radius: 12px;
-  border: 1px solid #cbd5e1;
-  box-shadow: 0 4px 15px rgba(15, 43, 72, 0.08);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-sizing: border-box;
-  height: 100%;
+.form-status {
+  margin: 8px 0 0;
+  font-weight: bold;
+  font-size: 14px;
 }
 
+/* 右側聯絡資訊內容 */
 .info-top {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
 }
 
 .info-row {
@@ -376,8 +383,8 @@ h1, h2, h3 {
   align-items: center;
   justify-content: space-between;
   gap: 15px;
-  margin-top: 15px;
-  padding-top: 15px;
+  margin-top: 20px;
+  padding-top: 16px;
   border-top: 1px dashed #cbd5e1;
 }
 
@@ -391,7 +398,7 @@ h1, h2, h3 {
 .line-btn-block {
   background-color: #00b900;
   color: #ffffff !important;
-  padding: 8px 14px;
+  padding: 10px 16px;
   border-radius: 6px;
   font-size: 14px;
   font-weight: 700;
@@ -503,9 +510,9 @@ h1, h2, h3 {
     grid-template-columns: 1fr;
   }
 
-  .contact-info {
+  .contact-card {
     height: auto;
-    gap: 16px;
+    gap: 20px;
   }
 
   .mobile-bar {
