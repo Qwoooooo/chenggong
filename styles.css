@@ -255,7 +255,7 @@ h1, h2, h3 {
   align-items: stretch; /* 讓左右兩欄高度完全一致 */
 }
 
-/* 聯絡資訊卡片（與左側按鈕底部 100% 對齊） */
+/* 聯絡資訊卡片區塊 */
 .contact-info {
   background: #f8fafc;
   padding: 25px;
@@ -263,9 +263,15 @@ h1, h2, h3 {
   border: 1px solid #e2e8f0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* 均勻分配間距，讓 QR Code 貼齊最下方 */
+  justify-content: space-between;
   box-sizing: border-box;
-  height: 100%; /* 填滿與左側同高 */
+  height: 100%;
+}
+
+.info-top {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .info-row {
@@ -297,42 +303,61 @@ h1, h2, h3 {
   text-decoration: underline;
 }
 
-.line-btn-inline {
-  background-color: #00b900;
-  color: #ffffff !important;
-  padding: 4px 12px;
-  border-radius: 4px;
-  font-size: 14px;
-  display: inline-block;
+/* LINE 按鈕與 QR Code 雙欄左右對齊 */
+.line-qrcode-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dashed #cbd5e1;
 }
 
-.line-btn-inline:hover {
+.line-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.line-btn-block {
+  background-color: #00b900;
+  color: #ffffff !important;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s ease;
+}
+
+.line-btn-block:hover {
   background-color: #009900;
   text-decoration: none !important;
 }
 
-/* QR Code 底部對齊小卡 */
-.qrcode-box {
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 1px dashed #cbd5e1;
+.qrcode-col {
   text-align: center;
+  flex-shrink: 0;
 }
 
-.qrcode-box img {
-  width: 90px;
-  height: 90px;
-  margin: 0 auto;
+.qrcode-col img {
+  width: 85px;
+  height: 85px;
   border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
   border: 1px solid #e2e8f0;
   padding: 4px;
   background: #ffffff;
+  display: block;
+  margin: 0 auto;
 }
 
-.qrcode-box p {
+.qrcode-col p {
   margin: 4px 0 0;
-  font-size: 12px;
+  font-size: 11px;
   color: #64748b;
 }
 
