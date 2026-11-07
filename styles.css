@@ -96,7 +96,7 @@ h1, h2, h3 {
 /* Hero 主視覺區 */
 .hero {
   background: linear-gradient(rgba(15, 43, 72, 0.75), rgba(15, 43, 72, 0.75)), 
-              url('images/banner.png') center/cover no-repeat;
+              url('banner.jpg') center/cover no-repeat;
   min-height: 480px;
   display: flex;
   align-items: center;
