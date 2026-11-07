@@ -163,9 +163,16 @@ h1, h2, h3 {
   transform: translateY(-2px);
 }
 
-/* Section 通用區塊 */
+/* Section 通用區塊與配色層次 */
 .section {
   padding: 70px 0;
+  background-color: #ffffff;
+}
+
+.bg-light {
+  background-color: #f1f5f9; /* 柔和淺灰藍，打破死白感 */
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .section-title {
@@ -173,6 +180,7 @@ h1, h2, h3 {
   text-align: center;
   margin-bottom: 15px;
   position: relative;
+  color: #0f2b48;
 }
 
 .section-title::after {
@@ -187,17 +195,15 @@ h1, h2, h3 {
 
 .section-desc {
   text-align: center;
-  max-width: 750px;
+  max-width: 820px;
   margin: 0 auto 40px;
-  color: #555;
+  color: #475569;
   font-size: 1.05rem;
+  line-height: 1.8;
+  text-wrap: balance; /* 自然平衡斷句，防止單字孤立落行 */
 }
 
-.bg-light {
-  background-color: #f8fafc;
-}
-
-/* 服務卡片 Grid */
+/* 服務卡片 Grid 與質感樣式 */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -209,14 +215,15 @@ h1, h2, h3 {
   background-color: #ffffff;
   border-radius: 12px;
   padding: 35px 30px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  border: 1px solid #edf2f7;
+  box-shadow: 0 4px 15px rgba(15, 43, 72, 0.08);
+  border: 1px solid #cbd5e1;
+  border-top: 4px solid #f39c12; /* 品牌橘黃頂條 */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(15, 43, 72, 0.12);
 }
 
 .card-header {
@@ -234,13 +241,14 @@ h1, h2, h3 {
 
 .card h3 {
   margin: 0;
-  font-size: 1.35rem;
+  font-size: 1.3rem;
+  color: #0f2b48;
 }
 
 .card ul {
   padding-left: 20px;
   margin: 0;
-  color: #4a5568;
+  color: #334155;
 }
 
 .card li {
@@ -252,10 +260,10 @@ h1, h2, h3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  align-items: stretch; /* 左右欄等高 */
+  align-items: stretch;
 }
 
-/* 全域左側表單樣式 */
+/* 左側表單樣式 */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -315,10 +323,11 @@ h1, h2, h3 {
 
 /* 右側聯絡資訊卡片 */
 .contact-info {
-  background: #f8fafc;
+  background: #ffffff;
   padding: 25px;
-  border-radius: 10px;
-  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 4px 15px rgba(15, 43, 72, 0.08);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
