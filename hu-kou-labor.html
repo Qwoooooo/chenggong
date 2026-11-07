@@ -1,59 +1,221 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>湖口人力派遣｜成功工程行</title>
-  <meta name="description" content="成功工程行專營湖口地區人力派遣服務，提供打石工、粗工、臨時工等專業支援，快速派工、效率高、值得信賴。">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO 標題與描述優化 (湖口在地與工業區關鍵字強化) -->
+  <title>湖口人力派遣與打石粗工｜成功工程行－湖口工業區、工地拆除與臨時工支援</title>
+  <meta name="description" content="湖口在地人力派遣首選！成功工程行專營湖口鄉、湖口工業區、新豐與竹北地區之打石工、工地粗工、拆除工與臨時工調派。快速派工、經驗豐富，歡迎來電 03-5692910 或加 LINE 快速估價。">
+  <meta name="keywords" content="湖口人力派遣, 湖口打石工, 湖口粗工, 湖口工業區人力, 湖口拆除工程, 湖口臨時工, 成功工程行">
+  <link rel="canonical" href="https://chenggonggongcheng.com.tw/hu-kou-labor.html" />
+
+  <!-- Open Graph / 社群分享預覽卡片 -->
+  <meta property="og:title" content="湖口人力派遣與打石粗工｜成功工程行" />
+  <meta property="og:description" content="湖口在地人力專家！提供湖口工業區、建案工地專業打石拆除、粗工與臨時工支援，歡迎立即諮詢報價。" />
+  <meta property="og:image" content="https://chenggonggongcheng.com.tw/banner.jpg" />
+  <meta property="og:url" content="https://chenggonggongcheng.com.tw/hu-kou-labor.html" />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F7NCF2BS3V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F7NCF2BS3V');
+  </script>
+
+  <!-- 結構化資料 (Schema.org 服務標籤) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "湖口人力派遣、打石拆除、工地粗工",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "成功工程行",
+        "image": "https://chenggonggongcheng.com.tw/logo.png",
+        "telephone": "+886-3-5692910",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "中山路一段",
+          "addressLocality": "湖口鄉",
+          "addressRegion": "新竹縣",
+          "postalCode": "303",
+          "addressCountry": "TW"
+        }
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "新竹縣湖口鄉"
+      },
+      "description": "成功工程行提供湖口鄉及湖口工業區專業打石工、粗工、臨時工派遣與施工廢料整理服務。"
+    }
+  </script>
 </head>
 <body>
+
+  <!-- Header 導覽列 -->
   <header class="header">
-    <div class="container">
-      <a href="index.html"><img src="logo.png" alt="成功工程行 Logo" class="logo"></a>
+    <div class="container header-container">
+      <a href="index.html" class="logo-link">
+        <img src="logo.png" alt="成功工程行 Logo" class="logo">
+      </a>
+    
       <nav class="nav">
-        <ul>
-          <li><a href="index.html#home">首頁</a></li>
-          <li><a href="index.html#services">服務項目</a></li>
-          <li><a href="index.html#contact">聯絡我們</a></li>
+        <div class="hamburger" onclick="toggleMenu()" aria-label="切換選單">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul id="nav-links">
+          <li><a href="index.html#home" onclick="closeMenu()">首頁</a></li>
+          <li><a href="index.html#about" onclick="closeMenu()">關於我們</a></li>
+          <li><a href="index.html#services" onclick="closeMenu()">服務項目</a></li>
+          <li><a href="index.html#contact" onclick="closeMenu()">聯絡我們</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="section container">
-    <h1>湖口人力派遣服務</h1>
-    <p>成功工程行是湖口在地的人力派遣專家，專營 <strong>打石工、粗工、臨時工派遣</strong>，協助建築工程順利進行。我們服務新竹縣湖口鄉、新豐鄉、竹北市等地區，擁有多年工地合作經驗，能快速調度合適人力，滿足業主各類工程需求。</p>
+  <!-- Hero 主視覺區 -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>湖口在地人力派遣專家</h1>
+      <p>打石拆除工 ｜ 工地粗工 ｜ 湖口工業區廠房支援 ｜ 臨時工調配</p>
+      <div class="hero-buttons">
+        <a href="index.html#contact" class="btn btn-primary">線上表單諮詢</a>
+        <a href="https://line.me/ti/p/qzJLYWo71j" target="_blank" class="btn btn-secondary">LINE 快速估價</a>
+      </div>
+    </div>
+  </section>
 
-    <h2>我們能協助您哪些工程？</h2>
-    <ul>
-      <li>房屋拆除、磁磚地坪打除</li>
-      <li>場地清潔、材料搬運</li>
-      <li>模板鋼筋支援、粗工協作</li>
-      <li>臨時工、短期/長期人力派遣</li>
-    </ul>
+  <!-- 主內容區 -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">湖口深耕人力支援服務</h2>
+      <p class="section-desc">
+        成功工程行立足於<strong>新竹縣湖口鄉</strong>，專營湖口在地建案、住宅裝修與<strong>湖口工業區廠房工程</strong>的人力調配。擁有多年工地合作經驗，急件迅速出工，提供高效率、負責任的優質人力支援。
+      </p>
 
-    <h2>為什麼選擇成功工程行？</h2>
-    <ul>
-      <li><strong>快速派工：</strong>專人對接、彈性安排</li>
-      <li><strong>效率高：</strong>熟練工班、立即上手</li>
-      <li><strong>服務地區深耕：</strong>長期服務湖口在地建商與業主</li>
-    </ul>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-header">
+            <span class="card-icon">🔨</span>
+            <h3>打石拆除工派遣</h3>
+          </div>
+          <ul>
+            <li>牆面、地坪、磁磚打除與破碎作業</li>
+            <li>開門洞、RC牆面拆除工程</li>
+            <li>配備熟練氣動與電動破碎工具操作</li>
+            <li>施工防護措施與廢料打包清運整理</li>
+          </ul>
+        </div>
 
-    <h2>聯絡我們</h2>
-    <p>若您正在尋找值得信賴的湖口人力派遣公司，歡迎透過以下方式與我們聯繫：</p>
-    <ul>
-      <li>電話：<a href="tel:035692910">03-5692910</a></li>
-      <li>LINE：<a href="https://line.me/ti/p/qzJLYWo71j" target="_blank">點此加入</a></li>
-      <li>Email：success@construction.com</li>
-    </ul>
-    <p><a href="index.html#contact" class="btn">前往聯絡表單</a></p>
-  </main>
+        <div class="card">
+          <div class="card-header">
+            <span class="card-icon">👷</span>
+            <h3>粗工與臨時工調派</h3>
+          </div>
+          <ul>
+            <li>建材與廢料搬運、工地現場環境整理</li>
+            <li>協助模板、鋼筋與泥作專案工程進度</li>
+            <li>湖口工業區廠房定期或臨時清潔支援</li>
+            <li>彈性派工，支援臨時突發或長期人力需求</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- 優勢區塊 -->
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">為什麼選擇成功工程行？</h2>
+      <div class="process-grid" style="margin-top: 30px;">
+        <div class="process-step">
+          <div class="step-num">⚡</div>
+          <h3>快速派工</h3>
+          <p>專人快速對接，配合度高，急件或預約需求均能彈性安排。</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">💪</div>
+          <h3>經驗豐富</h3>
+          <p>工員熟練工地安全規範與工具操作，進場即發揮即戰力。</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">📍</div>
+          <h3>深耕湖口</h3>
+          <p>熟悉湖口鄉、新豐鄉與湖口工業區環境，調派動線極快。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 聯絡資訊區塊 -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">立即聯繫湖口派遣團隊</h2>
+      <p class="section-desc">若您有湖口或周邊地區工程人力需求，歡迎直接電話聯繫或加 LINE 評估：</p>
+      
+      <div class="contact-info" style="max-width: 600px; margin: 0 auto;">
+        <div class="info-item">
+          <strong>📍 在地服務據點：</strong>
+          <span>新竹縣湖口鄉中山路一段</span>
+        </div>
+        <div class="info-item">
+          <strong>📞 室內電話：</strong>
+          <a href="tel:035692910">03-5692910</a>
+        </div>
+        <div class="info-item">
+          <strong>📱 行動電話：</strong>
+          <div>
+            <a href="tel:0955151621">0955-151-621</a> / 
+            <a href="tel:0981438588">0981-438-588</a>
+          </div>
+        </div>
+        <div class="info-item">
+          <strong>💬 LINE 官方諮詢：</strong>
+          <a href="https://line.me/ti/p/qzJLYWo71j" target="_blank" class="line-link">點擊加 LINE 好友</a>
+        </div>
+        <div class="qrcode-wrapper">
+          <img src="qrcode.png" alt="成功工程行 LINE QR Code" class="qrcode">
+          <span class="qrcode-label">掃描 QR Code 加 LINE 報價</span>
+        </div>
+        <div style="text-align: center; margin-top: 25px;">
+          <a href="index.html#contact" class="btn btn-primary" style="width: 100%; box-sizing: border-box;">前往官網線上表單</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 成功工程行. 版權所有.</p>
+      <p>&copy; 2026 成功工程行. 版權所有. ｜ 湖口打石工・粗工人力派遣</p>
     </div>
   </footer>
+
+  <!-- 行動裝置固定點擊列 -->
+  <div class="mobile-bar">
+    <a href="tel:035692910" class="mobile-btn call-btn">📞 直接撥電話</a>
+    <a href="https://line.me/ti/p/qzJLYWo71j" target="_blank" class="mobile-btn line-btn">💬 LINE 報價</a>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav-links').classList.toggle('active');
+    }
+
+    function closeMenu() {
+      document.getElementById('nav-links').classList.remove('active');
+    }
+  </script>
 </body>
 </html>
