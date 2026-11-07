@@ -130,7 +130,7 @@ h1, h2, h3 {
   flex-wrap: wrap;
 }
 
-/* 按鈕樣式 */
+/* 按鈕通用樣式 */
 .btn {
   display: inline-block;
   padding: 12px 28px;
@@ -163,7 +163,7 @@ h1, h2, h3 {
   transform: translateY(-2px);
 }
 
-/* Section 區塊 */
+/* Section 通用區塊 */
 .section {
   padding: 70px 0;
 }
@@ -247,15 +247,54 @@ h1, h2, h3 {
   margin-bottom: 10px;
 }
 
-/* 聯絡我們 Grid（強制定高對齊） */
+/* 聯絡我們 雙欄對齊 Grid */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  align-items: stretch; /* 讓左右兩欄高度完全一致 */
+  align-items: stretch; /* 左右欄等高 */
 }
 
-/* 聯絡資訊卡片區塊 */
+/* 左側表單樣式 */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #0f2b48;
+}
+
+.form-status {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.btn-submit {
+  background-color: #0f2b48;
+  color: #ffffff;
+  width: 100%;
+}
+
+.btn-submit:hover {
+  background-color: #1a3a5c;
+}
+
+/* 右側聯絡資訊卡片 */
 .contact-info {
   background: #f8fafc;
   padding: 25px;
@@ -303,7 +342,7 @@ h1, h2, h3 {
   text-decoration: underline;
 }
 
-/* LINE 按鈕與 QR Code 雙欄左右對齊 */
+/* LINE 按鈕與 QR Code 雙欄橫向並排 */
 .line-qrcode-row {
   display: flex;
   align-items: center;
@@ -361,17 +400,6 @@ h1, h2, h3 {
   color: #64748b;
 }
 
-/* 手機版適應 */
-@media (max-width: 768px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-  .contact-info {
-    height: auto;
-    gap: 16px;
-  }
-}
-
 /* Footer */
 .footer {
   background-color: #0f2b48;
@@ -413,7 +441,7 @@ h1, h2, h3 {
   background-color: #00b900;
 }
 
-/* 響應式 RWD 調整 */
+/* 響應式 RWD 整合調整 */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
@@ -445,6 +473,11 @@ h1, h2, h3 {
 
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    height: auto;
+    gap: 16px;
   }
 
   .mobile-bar {
