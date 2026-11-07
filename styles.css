@@ -292,44 +292,82 @@ h1, h2, h3 {
   background-color: #1a3a5c;
 }
 
+/* 聯絡資訊全域對齊與卡片樣式 */
 .contact-info {
-  background-color: #f8fafc;
-  padding: 30px;
+  background: #f8fafc;
+  padding: 25px;
   border-radius: 12px;
+  border: 1px solid #e2e8f0;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 16px;
+  text-align: left;
 }
 
-.info-item {
-  font-size: 1rem;
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: #334155;
 }
 
-.info-item a {
+.info-icon {
+  font-size: 18px;
+  width: 32px;
+  height: 32px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  flex-shrink: 0;
+}
+
+.info-row a {
   color: #0f2b48;
   font-weight: 700;
   text-decoration: none;
 }
 
-.info-item a:hover {
+.info-row a:hover {
   text-decoration: underline;
 }
 
-.qrcode-wrapper {
+.line-btn-inline {
+  background-color: #00b900;
+  color: #ffffff !important;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.line-btn-inline:hover {
+  background-color: #009900;
+  text-decoration: none !important;
+}
+
+.qrcode-box {
   margin-top: 10px;
+  padding-top: 15px;
+  border-top: 1px dashed #cbd5e1;
   text-align: center;
 }
 
-.qrcode {
+.qrcode-box img {
   width: 140px;
-  margin: 0 auto 8px;
+  height: 140px;
+  margin: 0 auto;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-.qrcode-label {
-  font-size: 0.85rem;
-  color: #718096;
+.qrcode-box p {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: #64748b;
 }
 
 /* Footer */
@@ -410,134 +448,4 @@ h1, h2, h3 {
   .mobile-bar {
     display: flex;
   }
-  /* 聯絡資訊重構樣式 */
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.info-card {
-  background: #ffffff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  border: 1px solid #e2e8f0;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.info-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
-}
-
-.info-icon {
-  font-size: 1.2rem;
-  background-color: #f1f5f9;
-  width: 42px;
-  height: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  flex-shrink: 0;
-}
-
-.info-content {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.info-label {
-  font-size: 0.85rem;
-  color: #64748b;
-  font-weight: 500;
-}
-
-.info-text,
-.info-link {
-  font-size: 1.05rem;
-  color: #0f2b48;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.info-link:hover {
-  color: #f39c12;
-}
-
-/* 電話號碼膠囊標籤 */
-.phone-tags {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 2px;
-}
-
-.phone-tag {
-  background-color: #f8fafc;
-  color: #0f2b48;
-  font-weight: 700;
-  padding: 6px 12px;
-  border-radius: 6px;
-  border: 1px solid #cbd5e1;
-  text-decoration: none;
-  font-size: 0.95rem;
-  transition: all 0.2s ease;
-}
-
-.phone-tag:hover {
-  background-color: #0f2b48;
-  color: #ffffff;
-  border-color: #0f2b48;
-}
-
-/* LINE 按鈕 */
-.line-badge {
-  display: inline-block;
-  background-color: #00b900;
-  color: #ffffff;
-  font-weight: 700;
-  padding: 8px 16px;
-  border-radius: 20px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  width: fit-content;
-  margin-top: 4px;
-  transition: background-color 0.2s ease;
-}
-
-.line-badge:hover {
-  background-color: #009900;
-}
-
-/* QR Code 獨立卡片 */
-.qrcode-card {
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  border: 1px solid #e2e8f0;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.qrcode-img {
-  width: 140px;
-  height: 140px;
-  border-radius: 8px;
-}
-
-.qrcode-text {
-  font-size: 0.88rem;
-  color: #64748b;
-  font-weight: 500;
-}
 }
