@@ -17,7 +17,7 @@
   <meta property="og:url" content="https://chenggonggongcheng.com.tw/hu-kou-labor.html" />
   <meta property="og:type" content="website" />
 
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="stylesheet" href="styles.css?v=3" />
   <link rel="icon" href="favicon.ico" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
 
@@ -96,8 +96,8 @@
     </div>
   </section>
 
-  <!-- 主內容區 -->
-  <section class="section">
+  <!-- 主內容區 (淺灰藍背景交錯層次) -->
+  <section class="section bg-light">
     <div class="container">
       <h2 class="section-title">湖口深耕人力支援服務</h2>
       <p class="section-desc">
@@ -121,7 +121,7 @@
         <div class="card">
           <div class="card-header">
             <span class="card-icon">👷</span>
-            <h3>粗工與臨時工調派</h3>
+            <h3>粗工與人力支援調派</h3>
           </div>
           <ul>
             <li>建材與廢料搬運、工地現場環境整理</li>
@@ -134,62 +134,75 @@
     </div>
   </section>
 
-  <!-- 優勢區塊 -->
-  <section class="section bg-light">
+  <!-- 優勢區塊 (白底) -->
+  <section class="section">
     <div class="container">
       <h2 class="section-title">為什麼選擇成功工程行？</h2>
-      <div class="process-grid" style="margin-top: 30px;">
-        <div class="process-step">
-          <div class="step-num">⚡</div>
-          <h3>快速派工</h3>
-          <p>專人快速對接，配合度高，急件或預約需求均能彈性安排。</p>
+      <div class="card-grid" style="margin-top: 30px;">
+        <div class="card" style="text-align: center; border-top: 4px solid #f39c12;">
+          <div style="font-size: 2.5rem; margin-bottom: 15px;">⚡</div>
+          <h3 style="margin-bottom: 10px;">快速派工</h3>
+          <p style="color: #475569; margin: 0;">專人快速對接，配合度高，急件或預約需求均能彈性安排。</p>
         </div>
-        <div class="process-step">
-          <div class="step-num">💪</div>
-          <h3>經驗豐富</h3>
-          <p>工員熟練工地安全規範與工具操作，進場即發揮即戰力。</p>
+        <div class="card" style="text-align: center; border-top: 4px solid #f39c12;">
+          <div style="font-size: 2.5rem; margin-bottom: 15px;">💪</div>
+          <h3 style="margin-bottom: 10px;">經驗豐富</h3>
+          <p style="color: #475569; margin: 0;">工員熟練工地安全規範與工具操作，進場即發揮即戰力。</p>
         </div>
-        <div class="process-step">
-          <div class="step-num">📍</div>
-          <h3>深耕湖口</h3>
-          <p>熟悉湖口鄉、新豐鄉與湖口工業區環境，調派動線極快。</p>
+        <div class="card" style="text-align: center; border-top: 4px solid #f39c12;">
+          <div style="font-size: 2.5rem; margin-bottom: 15px;">📍</div>
+          <h3 style="margin-bottom: 10px;">深耕湖口</h3>
+          <p style="color: #475569; margin: 0;">熟悉湖口鄉、新豐鄉與湖口工業區環境，調派動線極快。</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 聯絡資訊區塊 -->
-  <section class="section">
+  <!-- 聯絡資訊區塊 (使用精緻白卡片風格) -->
+  <section class="section bg-light">
     <div class="container">
       <h2 class="section-title">立即聯繫湖口派遣團隊</h2>
       <p class="section-desc">若您有湖口或周邊地區工程人力需求，歡迎直接電話聯繫或加 LINE 評估：</p>
       
-      <div class="contact-info" style="max-width: 600px; margin: 0 auto;">
-        <div class="info-item">
-          <strong>📍 在地服務據點：</strong>
-          <span>新竹縣湖口鄉中山路一段</span>
+      <div class="contact-card" style="max-width: 650px; margin: 0 auto; padding: 35px;">
+        <div class="info-top" style="display: flex; flex-direction: column; gap: 16px;">
+          <p class="info-row">
+            <span class="info-icon">📍</span>
+            <strong>在地服務據點：</strong><span>新竹縣湖口鄉中山路一段</span>
+          </p>
+          <p class="info-row">
+            <span class="info-icon">📞</span>
+            <strong>室內電話：</strong><a href="tel:035692910">03-5692910</a>
+          </p>
+          <p class="info-row">
+            <span class="info-icon">📱</span>
+            <strong>行動電話：</strong>
+            <a href="tel:0955151621">0955-151-621</a> ｜ <a href="tel:0981438588">0981-438-588</a>
+          </p>
+          <p class="info-row">
+            <span class="info-icon">⏰</span>
+            <strong>營業時間：</strong><span>週一至週六 08:00 - 18:00</span>
+          </p>
         </div>
-        <div class="info-item">
-          <strong>📞 室內電話：</strong>
-          <a href="tel:035692910">03-5692910</a>
-        </div>
-        <div class="info-item">
-          <strong>📱 行動電話：</strong>
-          <div>
-            <a href="tel:0955151621">0955-151-621</a> / 
-            <a href="tel:0981438588">0981-438-588</a>
+
+        <!-- LINE 諮詢與 QR Code 橫向並排 -->
+        <div class="line-qrcode-row" style="margin-top: 20px; padding-top: 16px; border-top: 1px dashed #cbd5e1; display: flex; align-items: center; justify-content: space-between; gap: 15px;">
+          <div class="line-col" style="display: flex; flex-direction: column; align-items: flex-start; gap: 8px;">
+            <p class="info-row" style="margin: 0;">
+              <span class="info-icon">💬</span>
+              <strong>LINE 諮詢：</strong>
+            </p>
+            <a href="https://line.me/ti/p/qzJLYWo71j" target="_blank" class="line-btn-block" style="background-color: #00b900; color: #ffffff !important; padding: 10px 16px; border-radius: 6px; font-weight: 700; text-decoration: none;">＋加 LINE 好友諮詢</a>
+          </div>
+
+          <div class="qrcode-col" style="text-align: center; flex-shrink: 0;">
+            <img src="qrcode.png" alt="成功工程行 LINE QR Code" style="width: 85px; height: 85px; border-radius: 6px; border: 1px solid #e2e8f0; padding: 4px; background: #fff; margin: 0 auto;">
+            <p style="margin: 4px 0 0; font-size: 11px; color: #64748b;">掃描 QR Code</p>
           </div>
         </div>
-        <div class="info-item">
-          <strong>💬 LINE 官方諮詢：</strong>
-          <a href="https://line.me/ti/p/qzJLYWo71j" target="_blank" class="line-link">點擊加 LINE 好友</a>
-        </div>
-        <div class="qrcode-wrapper">
-          <img src="qrcode.png" alt="成功工程行 LINE QR Code" class="qrcode">
-          <span class="qrcode-label">掃描 QR Code 加 LINE 報價</span>
-        </div>
-        <div style="text-align: center; margin-top: 25px;">
-          <a href="index.html#contact" class="btn btn-primary" style="width: 100%; box-sizing: border-box;">前往官網線上表單</a>
+
+        <div style="margin-top: 25px;">
+          <a href="index.html#contact" class="btn btn-submit" style="display: block; text-align: center; background-color: #0f2b48; color: #ffffff; padding: 14px; border-radius: 8px; font-weight: 700; text-decoration: none;">前往官網首頁填寫線上表單</a>
         </div>
       </div>
     </div>
