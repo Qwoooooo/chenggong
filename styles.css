@@ -247,52 +247,15 @@ h1, h2, h3 {
   margin-bottom: 10px;
 }
 
-/* 聯絡我們 Grid */
+/* 聯絡我們 Grid（強制定高對齊） */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
+  align-items: stretch; /* 讓左右兩欄高度完全一致 */
 }
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 12px 15px;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
-  font-size: 15px;
-  box-sizing: border-box;
-  transition: border-color 0.2s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: #0f2b48;
-}
-
-.form-status {
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-.btn-submit {
-  background-color: #0f2b48;
-  color: #ffffff;
-  width: 100%;
-}
-
-.btn-submit:hover {
-  background-color: #1a3a5c;
-}
-
-/* 聯絡資訊與 QR Code 樣式 */
+/* 聯絡資訊卡片（與左側按鈕底部 100% 對齊） */
 .contact-info {
   background: #f8fafc;
   padding: 25px;
@@ -300,8 +263,9 @@ h1, h2, h3 {
   border: 1px solid #e2e8f0;
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  text-align: left;
+  justify-content: space-between; /* 均勻分配間距，讓 QR Code 貼齊最下方 */
+  box-sizing: border-box;
+  height: 100%; /* 填滿與左側同高 */
 }
 
 .info-row {
@@ -347,25 +311,40 @@ h1, h2, h3 {
   text-decoration: none !important;
 }
 
+/* QR Code 底部對齊小卡 */
 .qrcode-box {
   margin-top: 10px;
-  padding-top: 15px;
+  padding-top: 10px;
   border-top: 1px dashed #cbd5e1;
   text-align: center;
 }
 
 .qrcode-box img {
-  width: 140px;
-  height: 140px;
+  width: 90px;
+  height: 90px;
   margin: 0 auto;
   border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  border: 1px solid #e2e8f0;
+  padding: 4px;
+  background: #ffffff;
 }
 
 .qrcode-box p {
-  margin: 8px 0 0;
-  font-size: 13px;
+  margin: 4px 0 0;
+  font-size: 12px;
   color: #64748b;
+}
+
+/* 手機版適應 */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-info {
+    height: auto;
+    gap: 16px;
+  }
 }
 
 /* Footer */
